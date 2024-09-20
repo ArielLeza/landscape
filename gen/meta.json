@@ -1,0 +1,1435 @@
+{
+  "closures": {
+    "cert-manager/cert": {
+      "deps": [
+        "ingress-controller",
+        "cert-manager/controller",
+        "namespace",
+        "dns-controller",
+        "k8sversion"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "k8sversion",
+        "dns-controller",
+        "namespace",
+        "cert-manager/controller",
+        "ingress-controller",
+        "cert-manager/cert"
+      ],
+      "usedby": [
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert"
+      ]
+    },
+    "cert-manager/controller": {
+      "deps": [
+        "namespace",
+        "dns-controller",
+        "k8sversion"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "k8sversion",
+        "dns-controller",
+        "namespace",
+        "cert-manager/controller"
+      ],
+      "usedby": [
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "cert-manager/controller"
+      ]
+    },
+    "dashboard": {
+      "deps": [
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "etcd/cluster",
+        "etcd/backupinfra",
+        "cert-manager/controller",
+        "namespace",
+        "dns-controller",
+        "k8sversion"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "k8sversion",
+        "dns-controller",
+        "namespace",
+        "cert-manager/controller",
+        "etcd/backupinfra",
+        "etcd/cluster",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard"
+      ],
+      "usedby": [],
+      "usedorder": [
+        "dashboard"
+      ]
+    },
+    "dns-controller": {
+      "deps": [
+        "k8sversion"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "k8sversion",
+        "dns-controller"
+      ],
+      "usedby": [
+        "cert-manager/controller",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "cert-manager/controller",
+        "dns-controller"
+      ]
+    },
+    "etcd/backupinfra": {
+      "deps": [],
+      "err": [],
+      "missing": [],
+      "order": [
+        "etcd/backupinfra"
+      ],
+      "usedby": [
+        "etcd/cluster",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "etcd/cluster",
+        "etcd/backupinfra"
+      ]
+    },
+    "etcd/cluster": {
+      "deps": [
+        "namespace",
+        "k8sversion",
+        "etcd/backupinfra"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "etcd/backupinfra",
+        "k8sversion",
+        "namespace",
+        "etcd/cluster"
+      ],
+      "usedby": [
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "etcd/cluster"
+      ]
+    },
+    "gardencontent/gardenproject": {
+      "deps": [
+        "gardencontent/profiles",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "cert-manager/controller",
+        "dns-controller",
+        "etcd/cluster",
+        "namespace",
+        "k8sversion",
+        "etcd/backupinfra"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "etcd/backupinfra",
+        "k8sversion",
+        "namespace",
+        "etcd/cluster",
+        "dns-controller",
+        "cert-manager/controller",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject"
+      ],
+      "usedby": [
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject"
+      ]
+    },
+    "gardencontent/profiles": {
+      "deps": [
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "cert-manager/controller",
+        "dns-controller",
+        "etcd/cluster",
+        "namespace",
+        "k8sversion",
+        "etcd/backupinfra"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "etcd/backupinfra",
+        "k8sversion",
+        "namespace",
+        "etcd/cluster",
+        "dns-controller",
+        "cert-manager/controller",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "gardencontent/profiles"
+      ],
+      "usedby": [
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles"
+      ]
+    },
+    "gardencontent/seeds/soils": {
+      "deps": [
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "cert-manager/controller",
+        "dns-controller",
+        "etcd/cluster",
+        "namespace",
+        "k8sversion",
+        "etcd/backupinfra"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "etcd/backupinfra",
+        "k8sversion",
+        "namespace",
+        "etcd/cluster",
+        "dns-controller",
+        "cert-manager/controller",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedby": [],
+      "usedorder": [
+        "gardencontent/seeds/soils"
+      ]
+    },
+    "gardener/extensions": {
+      "deps": [
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "cert-manager/controller",
+        "dns-controller",
+        "etcd/cluster",
+        "namespace",
+        "k8sversion",
+        "etcd/backupinfra"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "etcd/backupinfra",
+        "k8sversion",
+        "namespace",
+        "etcd/cluster",
+        "dns-controller",
+        "cert-manager/controller",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions"
+      ],
+      "usedby": [
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions"
+      ]
+    },
+    "gardener/runtime": {
+      "deps": [
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "cert-manager/controller",
+        "dns-controller",
+        "etcd/cluster",
+        "namespace",
+        "k8sversion",
+        "etcd/backupinfra"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "etcd/backupinfra",
+        "k8sversion",
+        "namespace",
+        "etcd/cluster",
+        "dns-controller",
+        "cert-manager/controller",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime"
+      ],
+      "usedby": [
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime"
+      ]
+    },
+    "gardener/virtual": {
+      "deps": [
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "cert-manager/controller",
+        "dns-controller",
+        "etcd/cluster",
+        "namespace",
+        "k8sversion",
+        "etcd/backupinfra"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "etcd/backupinfra",
+        "k8sversion",
+        "namespace",
+        "etcd/cluster",
+        "dns-controller",
+        "cert-manager/controller",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual"
+      ],
+      "usedby": [
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual"
+      ]
+    },
+    "identity": {
+      "deps": [
+        "cert-manager/cert",
+        "ingress-controller",
+        "cert-manager/controller",
+        "namespace",
+        "dns-controller",
+        "k8sversion"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "k8sversion",
+        "dns-controller",
+        "namespace",
+        "cert-manager/controller",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity"
+      ],
+      "usedby": [
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity"
+      ]
+    },
+    "ingress-controller": {
+      "deps": [
+        "dns-controller",
+        "k8sversion"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "k8sversion",
+        "dns-controller",
+        "ingress-controller"
+      ],
+      "usedby": [
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller"
+      ]
+    },
+    "k8sversion": {
+      "deps": [],
+      "err": [],
+      "missing": [],
+      "order": [
+        "k8sversion"
+      ],
+      "usedby": [
+        "dns-controller",
+        "cert-manager/controller",
+        "etcd/cluster",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "etcd/cluster",
+        "cert-manager/controller",
+        "dns-controller",
+        "k8sversion"
+      ]
+    },
+    "kube-apiserver": {
+      "deps": [
+        "identity",
+        "cert-manager/cert",
+        "ingress-controller",
+        "etcd/cluster",
+        "etcd/backupinfra",
+        "cert-manager/controller",
+        "namespace",
+        "dns-controller",
+        "k8sversion"
+      ],
+      "err": [],
+      "missing": [],
+      "order": [
+        "k8sversion",
+        "dns-controller",
+        "namespace",
+        "cert-manager/controller",
+        "etcd/backupinfra",
+        "etcd/cluster",
+        "ingress-controller",
+        "cert-manager/cert",
+        "identity",
+        "kube-apiserver"
+      ],
+      "usedby": [
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver"
+      ]
+    },
+    "namespace": {
+      "deps": [],
+      "err": [],
+      "missing": [],
+      "order": [
+        "namespace"
+      ],
+      "usedby": [
+        "cert-manager/controller",
+        "cert-manager/cert",
+        "etcd/cluster",
+        "identity",
+        "kube-apiserver",
+        "gardener/virtual",
+        "gardener/runtime",
+        "gardener/extensions",
+        "dashboard",
+        "gardencontent/profiles",
+        "gardencontent/gardenproject",
+        "gardencontent/seeds/soils"
+      ],
+      "usedorder": [
+        "gardencontent/seeds/soils",
+        "gardencontent/gardenproject",
+        "gardencontent/profiles",
+        "dashboard",
+        "gardener/extensions",
+        "gardener/runtime",
+        "gardener/virtual",
+        "kube-apiserver",
+        "identity",
+        "etcd/cluster",
+        "cert-manager/cert",
+        "cert-manager/controller",
+        "namespace"
+      ]
+    }
+  },
+  "components": {
+    "cert-manager/cert": {
+      "active": true,
+      "dir": "crop/components/cert-manager/cert",
+      "imports": [
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "ingress-controller",
+          "label": "ingress-controller"
+        },
+        {
+          "component": "cert-manager/controller",
+          "label": "cert-controller"
+        }
+      ],
+      "product": "<main>"
+    },
+    "cert-manager/controller": {
+      "active": true,
+      "dir": "crop/components/cert-manager/controller",
+      "imports": [
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "dns-controller",
+          "label": "dns-controller"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        }
+      ],
+      "product": "<main>"
+    },
+    "dashboard": {
+      "active": true,
+      "dir": "crop/components/dashboard",
+      "imports": [
+        {
+          "component": "dns-controller",
+          "label": "dns-controller"
+        },
+        {
+          "component": "ingress-controller",
+          "label": "ingress_dns"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        },
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "identity",
+          "label": "identity"
+        },
+        {
+          "component": "cert-manager/cert",
+          "label": "cert"
+        },
+        {
+          "component": "gardener/extensions",
+          "label": "gardener"
+        },
+        {
+          "component": "gardener/virtual",
+          "label": "gardener_virtual"
+        },
+        {
+          "component": "cert-manager/controller",
+          "label": "cert-controller"
+        }
+      ],
+      "product": "<main>"
+    },
+    "dns-controller": {
+      "active": true,
+      "dir": "crop/components/dns-controller",
+      "imports": [
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        }
+      ],
+      "product": "<main>"
+    },
+    "etcd/backupinfra": {
+      "active": true,
+      "dir": "crop/components/etcd/backupinfra",
+      "imports": [],
+      "product": "<main>"
+    },
+    "etcd/cluster": {
+      "active": true,
+      "dir": "crop/components/etcd/cluster",
+      "imports": [
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        },
+        {
+          "component": "etcd/backupinfra",
+          "label": "backupinfra"
+        }
+      ],
+      "product": "<main>"
+    },
+    "gardencontent/gardenproject": {
+      "active": true,
+      "dir": "crop/components/gardencontent/gardenproject",
+      "imports": [
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "gardener/runtime",
+          "label": "gardener/runtime"
+        },
+        {
+          "component": "gardencontent/profiles",
+          "label": "profiles"
+        }
+      ],
+      "product": "<main>"
+    },
+    "gardencontent/profiles": {
+      "active": true,
+      "dir": "crop/components/gardencontent/profiles",
+      "imports": [
+        {
+          "component": "ingress-controller",
+          "label": "ingress_dns"
+        },
+        {
+          "component": "gardener/extensions",
+          "label": "gardener_runtime"
+        },
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "gardener/virtual",
+          "label": "gardener_virtual"
+        }
+      ],
+      "product": "<main>"
+    },
+    "gardencontent/seeds/seeds": {
+      "active": false,
+      "dir": "crop/components/gardencontent/seeds/seeds",
+      "imports": [
+        {
+          "component": "ingress-controller",
+          "label": "ingress_dns"
+        },
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "gardencontent/seeds/shoots",
+          "label": "shoots"
+        }
+      ],
+      "product": "<main>"
+    },
+    "gardencontent/seeds/shoots": {
+      "active": false,
+      "dir": "crop/components/gardencontent/seeds/shoots",
+      "imports": [
+        {
+          "component": "gardencontent/gardenproject",
+          "label": "project"
+        },
+        {
+          "component": "gardencontent/seeds/soils",
+          "label": "soils"
+        },
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "gardener/virtual",
+          "label": "gardener"
+        },
+        {
+          "component": "gardencontent/profiles",
+          "label": "profiles"
+        }
+      ],
+      "product": "<main>"
+    },
+    "gardencontent/seeds/soils": {
+      "active": true,
+      "dir": "crop/components/gardencontent/seeds/soils",
+      "imports": [
+        {
+          "component": "gardencontent/gardenproject",
+          "label": "project"
+        },
+        {
+          "component": "ingress-controller",
+          "label": "ingress_dns"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        },
+        {
+          "component": "gardener/extensions",
+          "label": "gardener_runtime"
+        },
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "gardener/virtual",
+          "label": "gardener_virtual"
+        },
+        {
+          "component": "gardencontent/profiles",
+          "label": "profiles"
+        }
+      ],
+      "product": "<main>"
+    },
+    "gardener/extensions": {
+      "active": true,
+      "dir": "crop/components/gardener/extensions",
+      "imports": [
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "gardener/runtime",
+          "label": "gardener"
+        }
+      ],
+      "product": "<main>"
+    },
+    "gardener/runtime": {
+      "active": true,
+      "dir": "crop/components/gardener/runtime",
+      "imports": [
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        },
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "gardener/virtual",
+          "label": "gardener_virtual"
+        }
+      ],
+      "product": "<main>"
+    },
+    "gardener/virtual": {
+      "active": true,
+      "dir": "crop/components/gardener/virtual",
+      "imports": [
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "etcd/cluster",
+          "label": "etcd"
+        }
+      ],
+      "product": "<main>"
+    },
+    "identity": {
+      "active": true,
+      "dir": "crop/components/identity",
+      "imports": [
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "ingress-controller",
+          "label": "ingress-controller"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        },
+        {
+          "component": "cert-manager/cert",
+          "label": "cert"
+        }
+      ],
+      "product": "<main>"
+    },
+    "ingress-controller": {
+      "active": true,
+      "dir": "crop/components/ingress-controller",
+      "imports": [
+        {
+          "component": "dns-controller",
+          "label": "dns-controller"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        }
+      ],
+      "product": "<main>"
+    },
+    "k8sversion": {
+      "active": true,
+      "dir": "crop/components/k8sversion",
+      "imports": [],
+      "product": "<main>"
+    },
+    "kube-apiserver": {
+      "active": true,
+      "dir": "crop/components/kube-apiserver",
+      "imports": [
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "ingress-controller",
+          "label": "ingress_controller"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        },
+        {
+          "component": "identity",
+          "label": "identity"
+        },
+        {
+          "component": "etcd/cluster",
+          "label": "etcd"
+        },
+        {
+          "component": "cert-manager/controller",
+          "label": "cert-controller"
+        }
+      ],
+      "product": "<main>"
+    },
+    "monitoring/gardener-metrics-exporter": {
+      "active": false,
+      "dir": "crop/components/monitoring/gardener-metrics-exporter",
+      "imports": [
+        {
+          "component": "kube-apiserver",
+          "label": "kube-apiserver"
+        },
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "monitoring/grafana",
+          "label": "grafana"
+        },
+        {
+          "component": "monitoring/prometheus",
+          "label": "monitoring/prometheus"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        }
+      ],
+      "product": "<main>"
+    },
+    "monitoring/grafana": {
+      "active": false,
+      "dir": "crop/components/monitoring/grafana",
+      "imports": [
+        {
+          "component": "monitoring/prometheus",
+          "label": "prometheus"
+        },
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "ingress-controller",
+          "label": "ingress-controller"
+        },
+        {
+          "component": "cert-manager/cert",
+          "label": "cert"
+        }
+      ],
+      "product": "<main>"
+    },
+    "monitoring/prometheus": {
+      "active": false,
+      "dir": "crop/components/monitoring/prometheus",
+      "imports": [
+        {
+          "component": "namespace",
+          "label": "namespace"
+        },
+        {
+          "component": "ingress-controller",
+          "label": "ingress-controller"
+        },
+        {
+          "component": "kube-apiserver",
+          "label": "kube_apiserver"
+        },
+        {
+          "component": "identity",
+          "label": "identity"
+        },
+        {
+          "component": "cert-manager/cert",
+          "label": "cert"
+        },
+        {
+          "component": "gardener/extensions",
+          "label": "gardener"
+        }
+      ],
+      "product": "<main>"
+    },
+    "namespace": {
+      "active": true,
+      "dir": "crop/components/namespace",
+      "imports": [],
+      "product": "<main>"
+    },
+    "network-policies": {
+      "active": false,
+      "dir": "crop/components/network-policies",
+      "imports": [
+        {
+          "component": "namespace",
+          "label": "namespace"
+        }
+      ],
+      "product": "<main>"
+    },
+    "terminals": {
+      "active": false,
+      "dir": "crop/components/terminals",
+      "imports": [
+        {
+          "component": "kube-apiserver",
+          "label": "kube-apiserver"
+        },
+        {
+          "component": "ingress-controller",
+          "label": "ingress-controller"
+        },
+        {
+          "component": "k8sversion",
+          "label": "k8sversion"
+        },
+        {
+          "component": "gardener/runtime",
+          "label": "gardener/runtime"
+        },
+        {
+          "component": "cert-manager/solver",
+          "label": "cert-manager/solver"
+        }
+      ],
+      "product": "<main>"
+    },
+    "test-shoot": {
+      "active": false,
+      "dir": "crop/components/test-shoot",
+      "imports": [
+        {
+          "component": "gardenconfig",
+          "label": "gardenconfig"
+        }
+      ],
+      "product": "<main>"
+    }
+  },
+  "cycles": [],
+  "graph": {
+    "cert-manager/cert": [
+      "namespace",
+      "ingress-controller",
+      "cert-manager/controller"
+    ],
+    "cert-manager/controller": [
+      "namespace",
+      "dns-controller",
+      "k8sversion"
+    ],
+    "dashboard": [
+      "dns-controller",
+      "ingress-controller",
+      "k8sversion",
+      "kube-apiserver",
+      "identity",
+      "cert-manager/cert",
+      "gardener/extensions",
+      "gardener/virtual",
+      "cert-manager/controller"
+    ],
+    "dns-controller": [
+      "k8sversion"
+    ],
+    "etcd/backupinfra": [],
+    "etcd/cluster": [
+      "namespace",
+      "k8sversion",
+      "etcd/backupinfra"
+    ],
+    "gardencontent/gardenproject": [
+      "kube-apiserver",
+      "gardener/runtime",
+      "gardencontent/profiles"
+    ],
+    "gardencontent/profiles": [
+      "ingress-controller",
+      "gardener/extensions",
+      "kube-apiserver",
+      "gardener/virtual"
+    ],
+    "gardencontent/seeds/soils": [
+      "gardencontent/gardenproject",
+      "ingress-controller",
+      "k8sversion",
+      "gardener/extensions",
+      "kube-apiserver",
+      "gardener/virtual",
+      "gardencontent/profiles"
+    ],
+    "gardener/extensions": [
+      "namespace",
+      "kube-apiserver",
+      "gardener/runtime"
+    ],
+    "gardener/runtime": [
+      "namespace",
+      "k8sversion",
+      "kube-apiserver",
+      "gardener/virtual"
+    ],
+    "gardener/virtual": [
+      "kube-apiserver",
+      "etcd/cluster"
+    ],
+    "identity": [
+      "namespace",
+      "ingress-controller",
+      "k8sversion",
+      "cert-manager/cert"
+    ],
+    "ingress-controller": [
+      "dns-controller",
+      "k8sversion"
+    ],
+    "k8sversion": [],
+    "kube-apiserver": [
+      "namespace",
+      "ingress-controller",
+      "k8sversion",
+      "identity",
+      "etcd/cluster",
+      "cert-manager/controller"
+    ],
+    "namespace": []
+  },
+  "order": [
+    "namespace",
+    "k8sversion",
+    "dns-controller",
+    "cert-manager/controller",
+    "etcd/backupinfra",
+    "etcd/cluster",
+    "ingress-controller",
+    "cert-manager/cert",
+    "identity",
+    "kube-apiserver",
+    "gardener/virtual",
+    "gardener/runtime",
+    "gardener/extensions",
+    "gardencontent/profiles",
+    "gardencontent/gardenproject",
+    "gardencontent/seeds/soils",
+    "dashboard"
+  ],
+  "products": {
+    "<main>": {
+      "dir": "crop"
+    }
+  },
+  "templates": {},
+  "usedby": {
+    "cert-manager/cert": [
+      "dashboard",
+      "identity"
+    ],
+    "cert-manager/controller": [
+      "cert-manager/cert",
+      "dashboard",
+      "kube-apiserver"
+    ],
+    "dashboard": [],
+    "dns-controller": [
+      "cert-manager/controller",
+      "dashboard",
+      "ingress-controller"
+    ],
+    "etcd/backupinfra": [
+      "etcd/cluster"
+    ],
+    "etcd/cluster": [
+      "gardener/virtual",
+      "kube-apiserver"
+    ],
+    "gardencontent/gardenproject": [
+      "gardencontent/seeds/soils"
+    ],
+    "gardencontent/profiles": [
+      "gardencontent/gardenproject",
+      "gardencontent/seeds/soils"
+    ],
+    "gardencontent/seeds/soils": [],
+    "gardener/extensions": [
+      "dashboard",
+      "gardencontent/profiles",
+      "gardencontent/seeds/soils"
+    ],
+    "gardener/runtime": [
+      "gardencontent/gardenproject",
+      "gardener/extensions"
+    ],
+    "gardener/virtual": [
+      "dashboard",
+      "gardencontent/profiles",
+      "gardencontent/seeds/soils",
+      "gardener/runtime"
+    ],
+    "identity": [
+      "dashboard",
+      "kube-apiserver"
+    ],
+    "ingress-controller": [
+      "cert-manager/cert",
+      "dashboard",
+      "gardencontent/profiles",
+      "gardencontent/seeds/soils",
+      "identity",
+      "kube-apiserver"
+    ],
+    "k8sversion": [
+      "cert-manager/controller",
+      "dashboard",
+      "dns-controller",
+      "etcd/cluster",
+      "gardencontent/seeds/soils",
+      "gardener/runtime",
+      "identity",
+      "ingress-controller",
+      "kube-apiserver"
+    ],
+    "kube-apiserver": [
+      "dashboard",
+      "gardencontent/gardenproject",
+      "gardencontent/profiles",
+      "gardencontent/seeds/soils",
+      "gardener/extensions",
+      "gardener/runtime",
+      "gardener/virtual"
+    ],
+    "namespace": [
+      "cert-manager/cert",
+      "cert-manager/controller",
+      "etcd/cluster",
+      "gardener/extensions",
+      "gardener/runtime",
+      "identity",
+      "kube-apiserver"
+    ]
+  },
+  "usedorder": [
+    "dashboard",
+    "gardencontent/seeds/soils",
+    "gardencontent/gardenproject",
+    "gardencontent/profiles",
+    "gardener/extensions",
+    "gardener/runtime",
+    "gardener/virtual",
+    "kube-apiserver",
+    "identity",
+    "cert-manager/cert",
+    "ingress-controller",
+    "etcd/cluster",
+    "etcd/backupinfra",
+    "cert-manager/controller",
+    "dns-controller",
+    "k8sversion",
+    "namespace"
+  ]
+}

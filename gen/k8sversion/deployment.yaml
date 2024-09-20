@@ -1,0 +1,7 @@
+funcs:
+  remove_trailing_plus: '(( lambda|x|->substr(x, -1) == "+" ? substr(x, 0, -1) : x
+    ))'
+k8sVersions:
+  base: "1.24"
+  soils:
+    aws: "1.24"
